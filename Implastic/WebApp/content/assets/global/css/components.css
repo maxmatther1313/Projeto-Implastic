@@ -3673,7 +3673,6 @@ Customized Bootstrap Labels
 h1 .label, h2 .label, h3 .label, h4 .label, h5 .label, h6 .label {
   font-size: 75%;
 }
-
 /* Labels variants */
 .label-default {
   background-color: #c6c6c6;
