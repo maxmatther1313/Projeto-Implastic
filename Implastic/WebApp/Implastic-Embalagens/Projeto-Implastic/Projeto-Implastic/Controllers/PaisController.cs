@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto_Implastic.DAO;
+using Projeto_Implastic.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,15 @@ namespace Projeto_Implastic.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Form()
+        {
+            ViewBag.Pais = new Pais();
+            PaisesDAO dao = new PaisesDAO();
+            IList<Pais> paises = dao.Lista();
+            ViewBag.Paises = paises;
+            return View(paises);
         }
     }
 }
